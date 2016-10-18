@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/space_10"
+    android:paddingLeft="@dimen/space_8"
+    android:paddingRight="@dimen/space_8"
+    android:background="@color/text_white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_img_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/people01"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/space_8">
+
+        <TextView
+            android:id="@+id/user_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="G军仔"
+            android:textColor="@color/text_common"
+            android:textSize="@dimen/textSize_14"/>
+
+        <TextView
+            android:id="@+id/comment_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/space_8"
+            android:text="感觉这工作一定非常赞！有音乐 还可以写代码。。。没有比这更好的了。。。"
+            android:textSize="@dimen/textSize_12"
+            android:textColor="@color/text_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/space_10"
+            android:paddingBottom="@dimen/space_10">
+
+            <TextView
+                android:id="@+id/comment_time_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2天前"
+                android:textColor="@color/text_common"
+                android:textSize="@dimen/textSize_12"/>
+
+            <TextView
+                android:id="@+id/comment_like_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textSize="@dimen/textSize_12"
+                android:textColor="@color/text_common"
+                android:drawableLeft="@mipmap/ic_article_like"
+                android:drawablePadding="@dimen/space_4"
+                android:contentDescription="@string/app_name"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/line_space" />
+
+    </LinearLayout>
+
+</LinearLayout>

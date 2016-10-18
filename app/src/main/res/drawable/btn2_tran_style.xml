@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+    <!--<item>-->
+        <!--<shape>-->
+            <!--<solid android:color="#00000000"/>-->
+            <!--<corners android:radius="@dimen/space_4" />-->
+        <!--</shape>-->
+    <!--</item>-->
+
+    <!--<item android:left="@dimen/line_1"-->
+        <!--android:right="@dimen/line_1"-->
+        <!--android:bottom="@dimen/line_1"-->
+        <!--android:top="@dimen/line_1">-->
+        <!--<shape>-->
+            <!--<corners android:radius="@dimen/space_4" />-->
+            <!--<solid android:color="@android:color/transparent" />-->
+        <!--</shape>-->
+    <!--</item>-->
+
+    <!---->
+<!--</layer-list>-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <corners android:radius="@dimen/space_3"/>
+    <stroke
+        android:width="@dimen/line_1"
+        android:color="@color/text_white"/>
+    <solid android:color="#00000000" />
+
+</shape>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg_style">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="投票"
+        android:textColor="@color/text_common"
+        android:textSize="@dimen/textSize_18"
+        android:paddingTop="@dimen/space_16"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/vote_up_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="赞同"
+            android:textColor="@color/text_common"
+            android:textSize="@dimen/textSize_12"
+            android:drawableTop="@mipmap/ic_vote_up_normal"
+            android:gravity="center_horizontal"
+            android:drawablePadding="@dimen/space_4"
+            android:padding="@dimen/space_35"/>
+
+        <TextView
+            android:id="@+id/vote_down_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="反对"
+            android:textColor="@color/text_common"
+            android:textSize="@dimen/textSize_12"
+            android:drawableTop="@mipmap/ic_vote_down_normal"
+            android:gravity="center_horizontal"
+            android:drawablePadding="@dimen/space_4"
+            android:padding="@dimen/space_35"/>
+
+    </LinearLayout>
+
+</LinearLayout>

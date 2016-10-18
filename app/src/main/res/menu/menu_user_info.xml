@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_weibo"
+        app:showAsAction="ifRoom"
+        android:title="@string/action_about"
+        android:icon="@mipmap/ic_weibo_icon"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_blog"
+        app:showAsAction="ifRoom"
+        android:title="@string/action_about"
+        android:icon="@mipmap/ic_blog_icon"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/action_github"
+        app:showAsAction="ifRoom"
+        android:title="@string/action_about"
+        android:icon="@mipmap/ic_github_icon"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/action_email"
+        app:showAsAction="ifRoom"
+        android:title="@string/action_about"
+        android:icon="@mipmap/ic_email"
+        android:visible="false" />
+
+</menu>

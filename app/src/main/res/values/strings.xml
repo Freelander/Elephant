@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">大象</string>
+    <string name="app_topic_details">主题详情页</string>
+    <string name="app_comment_list">评论列表</string>
+    <string name="app_user_info">用户信息</string>
+    <string name="app_edit_info">修改个人信息</string>
+    <string name="app_setting">设置</string>
+    <string name="app_publish">发布话题</string>
+    <string name="app_login">登录</string>
+    <string name="app_webview">网页</string>
+    <string name="app_photo_show">图片浏览</string>
+    <string name="app_about_app">关于 App</string>
+    <string name="app_user_message">我的消息</string>
+    <string name="app_topic_preview">话题预览</string>
+
+    <string name="action_settings">设置</string>
+    <string name="action_about">关于我</string>
+    <string name="action_search">搜索</string>
+    <string name="action_notice">通知</string>
+    <string name="action_share">分享</string>
+    <string name="action_report">举报</string>
+    <string name="action_blog">博客</string>
+    <string name="action_github">GitHub</string>
+    <string name="action_weibo">WeiBo</string>
+    <string name="action_follow">关注</string>
+    <string name="action_publish">发布</string>
+    <string name="action_preview">预览</string>
+
+    <string name="menu_recommend">精华</string>
+    <string name="menu_hot">投票</string>
+    <string name="menu_newest">最近</string>
+    <string name="menu_jobs">酷工作</string>
+    <string name="menu_wiki">社区WIKI</string>
+    <string name="menu_nobody">零回复</string>
+    <string name="menu_message">我的消息</string>
+    <string name="menu_follow">我的关注</string>
+    <string name="menu_collect">我的收藏</string>
+    <string name="menu_vote">赞过话题</string>
+    <string name="menu_topic">分享话题</string>
+    <string name="menu_revert">回复话题</string>
+    <string name="menu_change_theme">切换主题</string>
+    <string name="menu_login_help">登录帮助</string>
+
+    <string name="hint_comment">请输入评论</string>
+    <string name="hint_topic_title">请填写标题</string>
+    <string name="hint_topic_node">请选择节点</string>
+    <string name="hint_topic_content">请使用 Markdown 格式书写~_~</string>
+
+    <string name="toast_msg_follow">关注成功</string>
+    <string name="toast_msg_follow_del">取消关注</string>
+    <string name="toast_msg_favorite">收藏成功</string>
+    <string name="toast_msg_favorite_del">取消收藏</string>
+    <string name="toast_clean_success">屁股干干净净的 ~_~</string>
+    <string name="toast_clean_fail">清除失败 ~_~</string>
+    <string name="toast_no_login">亲，还没登录~</string>
+    <string name="toast_adorn">只是装饰而已哈~</string>
+    <string name="toast_modify_success">修改成功</string>
+    <string name="toast_no_content">内容不能空</string>
+    <string name="toast_opt_fail">操作异常</string>
+    <string name="toast_publish_fail">发布失败</string>
+
+    <string name="about_phphub">关于 PHPHub</string>
+    <string name="about_me">关于我</string>
+    <string name="open_source">源代码</string>
+
+    <string name="dialog_clean_cache">确定清除缓存?</string>
+    <string name="dialog_clean_negative_text">容我想想</string>
+    <string name="dialog_clean_positive_text">狠心清除</string>
+
+    <string name="dialog_exit_login">确定退出登录？</string>
+    <string name="dialog_exit_negative_text">容我想想</string>
+    <string name="dialog_exit_positive_text">狠心退出</string>
+
+    <string name="dialog_edit_name">修改昵称</string>
+    <string name="dialog_edit_signature">修改签名</string>
+    <string name="dialog_edit_intro">修改个人简介</string>
+    <string name="dialog_edit_address">修改居住地</string>
+    <string name="dialog_edit_github">修改 GitHub 账号</string>
+    <string name="dialog_edit_blog">修改个人博客</string>
+    <string name="dialog_edit_twitter">修改 Twitter 账号</string>
+    <string name="dialog_modify_loading">正在修改...</string>
+
+    <string name="dialog_btn_confirm">确定</string>
+    <string name="dialog_btn_cancel">取消</string>
+
+    <string name="share">分享给童鞋</string>
+    <string name="no_email">需先安装邮件应用并设置账户, 或直接发送邮件至 huanggaojun13@gmail.com</string>
+
+    <string name="umeng_key">57dfa2f2e0f55ace8e0039b4</string>
+
+</resources>

@@ -1,0 +1,7 @@
+
+# 如需要打正式包，请重新生成签名文件，更改相关信息，当前我只是使用调试签名文件
+
+STORE_FILE = ../debug.jks
+STORE_PASSWORD = 111111
+KEY_PASSWORD = 111111
+KEY_ALIAS = Jun

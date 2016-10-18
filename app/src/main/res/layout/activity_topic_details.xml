@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimary">
+
+    <include layout="@layout/common_toolbar" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg">
+
+        <com.jun.elephant.ui.widget.MultiStateView
+            android:id="@+id/multiStateView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="91%"
+            app:msv_emptyView="@layout/state_empty"
+            app:msv_loadingView="@layout/state_loading"
+            app:msv_errorView="@layout/state_error"
+            app:msv_viewState="loading">
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.jun.elephant.ui.widget.MultiStateView>
+
+        <View
+            android:id="@+id/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="1%"
+            android:background="@drawable/shadow"
+            android:layout_above="@id/bottom_rl"/>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/bottom_rl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="10%"
+            android:background="@android:color/white"
+            android:paddingLeft="@dimen/space_16"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/follow_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_widthPercent="20%"
+                android:gravity="center"
+                android:drawableTop="@mipmap/ic_follow_normal"
+                android:drawablePadding="@dimen/space_2"
+                android:text="关注"
+                android:textColor="@color/bg_gray"
+                android:textSize="@dimen/textSize_10"
+                android:paddingTop="@dimen/space_5"
+                android:paddingBottom="@dimen/space_2"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/favorite_tv"
+                android:layout_toStartOf="@+id/favorite_tv" />
+
+            <TextView
+                android:id="@+id/point_tv"
+                android:layout_width="63dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn1_normal"
+                android:paddingLeft="@dimen/space_8"
+                android:paddingRight="@dimen/space_8"
+                android:paddingTop="@dimen/space_4"
+                android:paddingBottom="@dimen/space_4"
+                android:drawableLeft="@mipmap/ic_point"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="@dimen/textSize_14"
+                android:textColor="@color/bg_gray"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/favorite_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_widthPercent="20%"
+                android:gravity="center_horizontal"
+                android:drawableTop="@mipmap/ic_bookmark_normal"
+                android:drawablePadding="@dimen/space_4"
+                android:text="收藏"
+                android:textColor="@color/bg_gray"
+                android:textSize="@dimen/textSize_10"
+                android:paddingTop="@dimen/space_5"
+                android:paddingBottom="@dimen/space_2"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_alignBaseline="@+id/follow_tv"
+                android:layout_alignBottom="@+id/follow_tv"
+                android:layout_toLeftOf="@+id/comment_tv"
+                android:layout_toStartOf="@+id/comment_tv" />
+
+            <TextView
+                android:id="@+id/comment_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_widthPercent="20%"
+                android:gravity="center"
+                android:drawableTop="@mipmap/ic_comment_normal"
+                android:drawablePadding="@dimen/space_4"
+                android:paddingTop="@dimen/space_7"
+                android:paddingBottom="@dimen/space_1"
+                android:text="0"
+                android:textColor="@color/bg_gray"
+                android:textSize="@dimen/textSize_10"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</LinearLayout>

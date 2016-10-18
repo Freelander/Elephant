@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimary">
+
+    <include layout="@layout/common_toolbar" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/bottom_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:paddingTop="@dimen/space_4"
+            android:paddingBottom="@dimen/space_4"
+            android:gravity="center_vertical">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/comment_edt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/space_8"
+                android:layout_marginRight="@dimen/space_8"
+                android:hint="@string/hint_comment"
+                android:background="@android:color/white"
+                android:textColorHint="@color/text_content"
+                android:textSize="@dimen/textSize_14"
+                android:paddingLeft="@dimen/space_10"
+                android:paddingTop="@dimen/space_6"
+                android:paddingBottom="@dimen/space_6"/>
+
+            <ImageView
+                android:id="@+id/send_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_8"
+                android:layout_marginRight="@dimen/space_8"
+                android:src="@mipmap/ic_send_default"
+                android:contentDescription="@string/app_name"/>
+
+        </LinearLayout>
+
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/recyclerView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--app:layout_heightPercent="95%"-->
+            <!--android:layout_above="@id/bottom_rl"/>-->
+
+        <com.jun.elephant.ui.widget.MultiStateView
+            android:id="@+id/multiStateView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="94%"
+            app:msv_emptyView="@layout/state_empty"
+            app:msv_loadingView="@layout/state_loading"
+            app:msv_errorView="@layout/state_error"
+            app:msv_viewState="loading"
+            android:layout_above="@id/bottom_rl"
+            android:background="@color/main_bg">
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.jun.elephant.ui.widget.MultiStateView>
+
+        <View
+            android:id="@+id/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/shadow"
+            android:layout_above="@id/bottom_rl"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</LinearLayout>

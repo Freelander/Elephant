@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_preview"
+        android:icon="@mipmap/ic_eye_white"
+        android:title="@string/action_preview"
+        app:showAsAction="ifRoom"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/action_publish"
+        android:icon="?attr/menuSend"
+        android:title="@string/action_publish"
+        app:showAsAction="ifRoom"/>
+
+</menu>

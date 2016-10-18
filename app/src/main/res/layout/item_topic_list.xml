@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/space_8"
+    android:layout_marginRight="@dimen/space_8"
+    android:layout_marginTop="@dimen/space_8"
+    android:clickable="true"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/space_4"
+    app:cardElevation="@dimen/line_0_5">
+
+    <cn.bingoogolapple.badgeview.BGABadgeRelativeLayout
+        android:id="@+id/bgaRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/space_8"
+        app:badge_bgColor="?attr/elephantBadge"
+        app:badge_dragable="false"
+        app:badge_gravity="rightCenter"
+        app:badge_horizontalMargin="@dimen/space_8"
+        android:background="@android:color/white"
+        app:badge_textColor="@android:color/white"
+        app:badge_padding="@dimen/space_5"
+        app:badge_textSize="@dimen/textSize_10">
+
+        <include layout="@layout/common_avatar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50"
+            android:paddingLeft="@dimen/space_8"
+            android:paddingRight="@dimen/space_24"
+            android:layout_toEndOf="@id/user_img_iv"
+            android:layout_toRightOf="@id/user_img_iv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/content_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/text_common"
+                android:textSize="@dimen/textSize_13"
+                tools:text="SegmentFault 访谈《我的编程之路》：" />
+
+            <TextView
+                android:id="@+id/content_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="bottom|end"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/textSize_10"
+                tools:text="其他 最后由 G军仔 1天前" />
+
+        </LinearLayout>
+
+    </cn.bingoogolapple.badgeview.BGABadgeRelativeLayout>
+
+</android.support.v7.widget.CardView>
+

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/elephantTheme"
+    android:theme="@style/Custom.Theme.ToolBar"
+    android:elevation="@dimen/space_4"
+    app:title="@string/app_name"
+    app:titleTextColor="?attr/elephantToolbarText"
+    app:titleTextAppearance="@style/toolbar_textAppearance"
+    app:popupTheme="@style/Theme.ToolBar.Base"
+    app:contentInsetStartWithNavigation="0dp"
+    app:navigationIcon="?attr/navBackIcon"
+    android:id="@+id/toolBar"
+    tools:targetApi="lollipop">
+
+    <RelativeLayout
+        android:id="@+id/user_info_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <com.jun.elephant.ui.widget.MySimpleDraweeView
+            android:id="@+id/user_img_iv"
+            android:layout_width="@dimen/space_35"
+            android:layout_height="@dimen/space_35"
+            app:roundAsCircle="true"
+            app:backgroundImage="@color/main_bg"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/user_img_iv"
+            android:paddingLeft="@dimen/space_8"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/user_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                tools:text="G军仔"
+                android:textSize="@dimen/textSize_14"
+                android:textColor="?attr/elephantToolbarText"/>
+
+            <TextView
+                android:id="@+id/user_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                tools:text="一个热爱分享的 Android 小伙伴个热爱分享的 Android 小伙伴"
+                android:textSize="@dimen/textSize_11"
+                android:textColor="?attr/elephantToolbarText"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>

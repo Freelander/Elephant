@@ -1,0 +1,117 @@
+<resources>>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme" parent="BlueTheme">
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="WhiteTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">?attr/elephantStatus</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="elephantBackground">@android:color/white</item>
+        <item name="elephantToolbarText">@color/theme_white_toolbar_text</item>
+        <item name="elephantBadge">@color/theme_white_badge</item>
+        <item name="elephantStatus">@color/theme_white_status</item>
+        <item name="elephantTextCommonColor">@color/theme_white_text_common</item>
+        <item name="elephantTextContentColor">@color/theme_white_text_content</item>
+        <item name="elephantTheme">@color/theme_white_theme</item>
+        <item name="elephantFloatBtn">@color/theme_white_float_btn</item>
+
+        <item name="navIcon">@mipmap/ic_actionbar_menu_white</item>
+        <item name="navBackIcon">@mipmap/ic_action_return_white</item>
+        <item name="overFlowIcon">@mipmap/ic_actionbar_menu_more_white</item>
+        <item name="menuSearch">@mipmap/ic_actionbar_search_white</item>
+        <item name="menuNotice">@mipmap/ic_actionbar_notice_white</item>
+        <item name="menuShare">@mipmap/ic_action_share_white</item>
+        <item name="menuSend">@mipmap/ic_send_default</item>
+
+    </style>
+
+    <style name="BlueTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">?attr/elephantStatus</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="elephantBackground">@color/colorPrimary</item>
+        <item name="elephantToolbarText">@color/theme_blue_toolbar_text</item>
+        <item name="elephantBadge">@color/theme_blue_badge</item>
+        <item name="elephantStatus">@color/theme_blue_status</item>
+        <item name="elephantTextCommonColor">@color/theme_blue_text_common</item>
+        <item name="elephantTextContentColor">@color/theme_blue_text_content</item>
+        <item name="elephantTheme">@color/theme_blue_theme</item>
+        <item name="elephantFloatBtn">@color/theme_blue_float_btn</item>
+
+        <item name="navIcon">@mipmap/ic_actionbar_menu</item>
+        <item name="navBackIcon">@mipmap/ic_action_return</item>
+        <item name="overFlowIcon">@mipmap/ic_actionbar_menu_more</item>
+        <item name="menuSearch">@mipmap/ic_actionbar_search</item>
+        <item name="menuNotice">@mipmap/ic_actionbar_notice</item>
+        <item name="menuShare">@mipmap/ic_action_share</item>
+        <item name="menuSend">@mipmap/ic_send_white</item>
+
+    </style>
+
+    <style name="GrayTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/theme_gray_status</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="elephantBackground">@color/colorPrimary</item>
+        <item name="elephantToolbarText">@color/theme_gray_toolbar_text</item>
+        <item name="elephantBadge">@color/theme_gray_badge</item>
+        <item name="elephantStatus">@color/theme_gray_status</item>
+        <item name="elephantTextCommonColor">@color/theme_gray_text_common</item>
+        <item name="elephantTextContentColor">@color/theme_gray_text_content</item>
+        <item name="elephantTheme">@color/theme_gray_theme</item>
+        <item name="elephantFloatBtn">@color/theme_gray_float_btn</item>
+
+        <item name="navIcon">@mipmap/ic_actionbar_menu</item>
+        <item name="navBackIcon">@mipmap/ic_action_return</item>
+        <item name="overFlowIcon">@mipmap/ic_actionbar_menu_more</item>
+        <item name="menuSearch">@mipmap/ic_actionbar_search</item>
+        <item name="menuNotice">@mipmap/ic_actionbar_notice</item>
+        <item name="menuShare">@mipmap/ic_action_share</item>
+        <item name="menuSend">@mipmap/ic_send_white</item>
+
+    </style>
+
+    <style name="Custom_Theme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:statusBarColor">?attr/elephantStatus</item>
+    </style>
+
+    <style name="Theme.ToolBar.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">@dimen/textSize_16</item>
+        <item name="android:textColorPrimary">@color/text_common</item>
+        <item name="android:buttonStyleInset">@color/text_white</item>
+    </style>
+
+    <style name="Custom.Theme.ToolBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:actionOverflowButtonStyle">@style/ActionButton.Overflow</item>
+    </style>
+
+    <style name="ActionButton.Overflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">?attr/overFlowIcon</item>
+        <item name="android:color">@android:color/white</item>
+    </style>
+
+    <style name="toolbar_textAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">@dimen/textSize_18</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+</resources>

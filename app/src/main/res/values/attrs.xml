@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="elephantStatus" format="color"/>
+    <attr name="elephantBackground" format="color" />
+    <attr name="elephantBadge" format="color" />
+    <attr name="elephantTextCommonColor" format="color" />
+    <attr name="elephantTextContentColor" format="color" />
+    <attr name="elephantTheme" format="color" />
+    <attr name="elephantFloatBtn" format="color" />
+    <attr name="elephantToolbarText" format="color" />
+
+    <attr name="navIcon" format="reference" />
+    <attr name="navBackIcon" format="reference" />
+    <attr name="overFlowIcon" format="reference" />
+    <attr name="menuSearch" format="reference" />
+    <attr name="menuNotice" format="reference" />
+    <attr name="menuShare" format="reference" />
+    <attr name="menuSend" format="reference" />
+
+    <!-- 自定义的ratingBar -->
+    <declare-styleable name="CustomRatingBar">
+
+        <!-- 选中的图片资源 -->
+        <attr name="starSrc" format="reference" />
+        <!-- 未选中的图片资源 -->
+        <attr name="starDst" format="reference" />
+        <!-- boolean值 -->
+        <attr name="clickable" format="boolean" />
+        <attr name="step" format="float" />
+        <attr name="space" format="float" />
+        <attr name="starNumber" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiStateView">
+        <attr name="msv_loadingView" format="reference" />
+        <attr name="msv_emptyView" format="reference" />
+        <attr name="msv_errorView" format="reference" />
+        <attr name="msv_viewState" format="enum">
+            <enum name="content" value="0" />
+            <enum name="error" value="1" />
+            <enum name="empty" value="2" />
+            <enum name="loading" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>

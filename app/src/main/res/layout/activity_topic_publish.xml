@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/common_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/main_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_15">
+
+            <EditText
+                android:id="@+id/topic_title_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_topic_title"
+                android:textColorHint="@color/text_content"
+                android:textSize="@dimen/textSize_16"
+                android:drawablePadding="@dimen/space_5"
+                android:background="@null"
+                android:paddingTop="@dimen/space_15"
+                android:paddingBottom="@dimen/space_15"
+                android:drawableBottom="@drawable/edt_line"
+                android:cursorVisible="true"/>
+
+            <TextView
+                android:id="@+id/topic_node_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_topic_node"
+                android:textColorHint="@color/text_content"
+                android:textSize="@dimen/textSize_16"
+                android:drawablePadding="@dimen/space_5"
+                android:paddingTop="@dimen/space_15"
+                android:paddingBottom="@dimen/space_15"
+                android:drawableBottom="@drawable/edt_line" />
+
+            <org.gemini.markdown.view.MarkdownEditText
+                android:id="@+id/topic_content_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_common"
+                android:textSize="@dimen/textSize_16"
+                android:hint="@string/hint_topic_content"
+                android:textColorHint="@color/text_content"
+                android:background="@color/main_bg" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/edit_opt_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/space_4"
+        android:paddingBottom="@dimen/space_4"
+        android:paddingRight="@dimen/space_8"
+        android:paddingLeft="@dimen/space_8"
+        android:background="@color/edit_bg"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/edit_bold_ib"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_edit_bold"
+            android:padding="@dimen/space_4"
+            android:layout_marginRight="@dimen/space_8"
+            android:background="@drawable/btn_bg_white"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/edit_italic_ib"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_edit_italic"
+            android:padding="@dimen/space_4"
+            android:layout_marginRight="@dimen/space_8"
+            android:background="@drawable/btn_bg_white"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/edit_line_ib"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_edit_line"
+            android:padding="@dimen/space_4"
+            android:layout_marginRight="@dimen/space_8"
+            android:background="@drawable/btn_bg_white"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/edit_link_ib"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_edit_link"
+            android:padding="@dimen/space_4"
+            android:layout_marginRight="@dimen/space_8"
+            android:background="@drawable/btn_bg_white"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/edit_quote_ib"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_edit_quote"
+            android:padding="@dimen/space_4"
+            android:layout_marginRight="@dimen/space_8"
+            android:background="@drawable/btn_bg_white"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/edit_list_ib"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_edit_list"
+            android:padding="@dimen/space_4"
+            android:layout_marginRight="@dimen/space_8"
+            android:background="@drawable/btn_bg_white"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/edit_code_ib"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_edit_code"
+            android:padding="@dimen/space_4"
+            android:layout_marginRight="@dimen/space_8"
+            android:background="@drawable/btn_bg_white"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/edit_img_ib"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_edit_img"
+            android:padding="@dimen/space_4"
+            android:layout_marginRight="@dimen/space_8"
+            android:background="@drawable/btn_bg_white"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/edit_title_ib"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_edit_title"
+            android:padding="@dimen/space_4"
+            android:background="@drawable/btn_bg_white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

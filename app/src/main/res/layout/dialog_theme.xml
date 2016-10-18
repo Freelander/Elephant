@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg_style">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="切换主题"
+        android:textColor="@color/text_common"
+        android:textSize="@dimen/textSize_18"
+        android:paddingTop="@dimen/space_16"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/space_25"
+        android:paddingBottom="@dimen/space_25">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/theme_blue"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:backgroundImage="@color/theme_blue_theme"
+            app:roundAsCircle="true"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/theme_gray"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:backgroundImage="@color/theme_gray_theme"
+            app:roundAsCircle="true"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_marginRight="@dimen/space_15"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/theme_white"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:backgroundImage="@color/theme_white_theme"
+            app:roundAsCircle="true"/>
+
+    </LinearLayout>
+
+</LinearLayout>

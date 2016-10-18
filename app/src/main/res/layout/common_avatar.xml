@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jun.elephant.ui.widget.MySimpleDraweeView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/user_img_iv"
+    android:layout_width="@dimen/space_50"
+    android:layout_height="@dimen/space_50"
+    android:layout_marginRight="@dimen/space_8"
+    app:backgroundImage="@color/main_bg"
+    app:roundAsCircle="true"
+    android:clickable="true"/>

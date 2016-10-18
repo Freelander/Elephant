@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true">
+
+            <ImageView
+                android:id="@+id/main_bg_iv"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                android:src="@color/colorPrimary"
+                android:fitsSystemWindows="true"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#64000000"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                android:fitsSystemWindows="true"
+                android:tint="#11000000"
+                android:contentDescription="@string/app_name"/>
+
+            <LinearLayout
+                android:id="@+id/user_info_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="90dp"
+                android:paddingLeft="@dimen/space_20"
+                android:paddingRight="@dimen/space_20">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="G军仔"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/textSize_20"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:gravity="left"/>
+
+                    <TextView
+                        android:id="@+id/user_real_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/user_name_tv"
+                        android:layout_alignBottom="@id/user_name_tv"
+                        tools:text="(黄高军)"
+                        android:textSize="@dimen/textSize_16"
+                        android:textColor="@android:color/white"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/user_address_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/user_name_tv"
+                        tools:text="广州"
+                        android:textSize="@dimen/textSize_14"
+                        android:drawableLeft="@mipmap/ic_address"
+                        android:drawablePadding="@dimen/space_4"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/space_8"
+                        android:visibility="gone"
+                        tools:visibility="visible"/>
+
+                </RelativeLayout>
+
+                <com.jun.elephant.ui.widget.MySimpleDraweeView
+                    android:id="@+id/user_avatar_civ"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:backgroundImage="@color/main_bg"
+                    app:roundAsCircle="true"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/signature_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="一个热爱分享的 Android 小伙伴..."
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textSize_14"
+                android:paddingLeft="@dimen/space_20"
+                android:layout_marginTop="170dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:alpha="0.5"/>
+
+            <LinearLayout
+                android:id="@+id/user_focus_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="230dp"
+                android:paddingLeft="@dimen/space_20">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:text="分享"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/textSize_14"/>
+
+                    <TextView
+                        android:id="@+id/user_share_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/textSize_14"
+                        android:text="0"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/space_20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:text="回复"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/textSize_14"/>
+
+                    <TextView
+                        android:id="@+id/user_reply_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/textSize_14"
+                        android:text="0"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/space_20"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:text="关注"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/textSize_14"/>
+
+                    <TextView
+                        android:id="@+id/user_follow_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/textSize_14"
+                        android:text="0"
+                        />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/edit_tv"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn2_tran_style"
+                    android:text="编辑"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/textSize_12"
+                    android:paddingTop="@dimen/space_10"
+                    android:paddingBottom="@dimen/space_10"
+                    android:gravity="center_horizontal"
+                    android:layout_marginRight="@dimen/space_20"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:actionBarSize"
+                android:background="@android:color/transparent"
+                android:theme="@style/Custom.Theme.ToolBar"
+                android:title=""
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@mipmap/ic_action_return">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/page_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/space_8"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/textSize_20"
+                        android:textColor="@android:color/white"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="1dp"
+            android:background="@android:color/white"
+            app:tabTextColor="?attr/elephantTextCommonColor"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabIndicatorHeight="3dp"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/line_0_8" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

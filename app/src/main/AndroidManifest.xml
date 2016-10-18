@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jun.elephant">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.REAL_GET_TASKS" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".Elephant"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Custom_Theme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.topic.details.TopicDetailsActivity"
+            android:label="@string/app_topic_details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Custom_Theme" />
+
+        <activity android:name=".ui.topic.reply.TopicCommentListActivity"
+            android:label="@string/app_comment_list"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Custom_Theme" />
+
+        <activity android:name=".ui.user.info.UserInfoActivity"
+            android:label="@string/app_user_info"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Custom_Theme"/>
+
+        <activity android:name=".ui.user.info.UserInfoEditActivity"
+            android:label="@string/app_edit_info"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Custom_Theme" />
+
+        <activity android:name=".ui.main.SettingActivity"
+            android:label="@string/app_setting"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Custom_Theme" />
+
+        <activity android:name=".ui.topic.publish.TopicPublishActivity"
+            android:label="@string/app_publish"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Custom_Theme" />
+
+        <activity android:name=".ui.login.LoginActivity"
+            android:label="@string/app_login"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Custom_Theme" />
+
+        <activity android:name=".ui.main.WebViewActivity"
+            android:label="@string/app_webview"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Custom_Theme" />
+
+        <activity android:name=".ui.main.PhotoShowActivity"
+            android:label="@string/app_photo_show"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Custom_Theme" />
+
+        <activity android:name=".ui.main.AboutAppActivity"
+            android:label="@string/app_about_app"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Custom_Theme" />
+
+        <activity android:name=".ui.user.message.UserMessageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Custom_Theme"
+            android:label="@string/app_user_message" />
+
+        <activity android:name=".ui.main.TopicPreviewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Custom_Theme"
+            android:label="@string/app_topic_preview" />
+
+        <!--友盟-->
+        <meta-data
+            android:value="${UMENG_APPKEY}"
+            android:name="UMENG_APPKEY" />
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
+    </application>
+
+</manifest>

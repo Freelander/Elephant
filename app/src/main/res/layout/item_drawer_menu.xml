@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/space_16"
+    android:gravity="center_vertical"
+    android:background="@color/text_white">
+
+    <ImageView
+        android:id="@+id/drawer_menu_ic"
+        android:layout_width="@dimen/img_48"
+        android:layout_height="@dimen/img_48"
+        android:paddingRight="@dimen/space_12"
+        android:paddingTop="@dimen/space_12"
+        android:paddingBottom="@dimen/space_12"
+        android:src="@mipmap/ic_send_default"
+        android:contentDescription="@string/app_name"/>
+
+    <TextView
+        android:id="@+id/drawer_menu_tv"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingLeft="@dimen/space_18"
+        android:gravity="center_vertical"
+        android:text="@string/app_name"
+        android:textColor="@color/text_common"
+        android:textSize="@dimen/textSize_14" />
+
+</LinearLayout>

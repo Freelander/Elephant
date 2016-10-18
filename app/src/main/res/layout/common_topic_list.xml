@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jun.elephant.ui.widget.MultiStateView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/multiStateView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    app:msv_emptyView="@layout/state_empty"
+    app:msv_errorView="@layout/state_error"
+    app:msv_loadingView="@layout/state_loading"
+    app:msv_viewState="content">
+
+    <com.jun.elephant.ui.widget.MySwipeRefreshLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+    </com.jun.elephant.ui.widget.MySwipeRefreshLayout>
+
+</com.jun.elephant.ui.widget.MultiStateView>

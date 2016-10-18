@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigation_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start|top"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/drawer_header" />
+
+    <include layout="@layout/shadow1" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawer_menu_rc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include
+        layout="@layout/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_0_1" />
+
+    <LinearLayout
+        android:id="@+id/setting_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_16">
+
+        <ImageView
+            android:layout_width="@dimen/img_48"
+            android:layout_height="@dimen/img_48"
+            android:contentDescription="@string/app_name"
+            android:paddingBottom="@dimen/space_12"
+            android:paddingRight="@dimen/space_12"
+            android:paddingTop="@dimen/space_12"
+            android:src="@mipmap/ic_main_palette" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_18"
+            android:text="@string/menu_change_theme"
+            android:textColor="@color/text_common"
+            android:textSize="@dimen/textSize_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_help_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_16">
+
+        <ImageView
+            android:layout_width="@dimen/img_48"
+            android:layout_height="@dimen/img_48"
+            android:contentDescription="@string/app_name"
+            android:paddingBottom="@dimen/space_12"
+            android:paddingRight="@dimen/space_12"
+            android:paddingTop="@dimen/space_12"
+            android:src="@mipmap/ic_help" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_18"
+            android:text="@string/menu_login_help"
+            android:textColor="@color/text_common"
+            android:textSize="@dimen/textSize_14" />
+
+    </LinearLayout>
+
+</LinearLayout>

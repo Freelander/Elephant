@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/space_8"
+    android:layout_marginRight="@dimen/space_8"
+    android:layout_marginTop="@dimen/space_8"
+    android:background="@color/text_white"
+    android:clickable="true"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/space_4"
+    app:cardElevation="@dimen/line_0_5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_8">
+
+        <include layout="@layout/common_avatar" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/user_img_iv"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/space_5">
+
+            <TextView
+                android:id="@+id/msg_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_common"
+                android:textSize="@dimen/textSize_13"
+                tools:text="goodspb • 4天前" />
+
+            <TextView
+                android:id="@+id/msg_details_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/textSize_12"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="回复了你的主题: Entrust - Laravel 用户权限系统解决方案" />
+
+            <TextView
+                android:id="@+id/msg_reply_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_6"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/textSize_13"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:text="\@xhl Authorization只是授权，Entrust是权限认证（RBAC）" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

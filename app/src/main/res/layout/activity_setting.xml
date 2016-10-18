@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/common_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/main_bg">
+
+        <TextView
+            android:id="@+id/feedback_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:paddingTop="@dimen/space_18"
+            android:paddingBottom="@dimen/space_18"
+            android:gravity="center_vertical"
+            android:background="@drawable/item_bg_line"
+            android:text="意见反馈"
+            android:textColor="@color/text_common"
+            android:textSize="@dimen/textSize_14" />
+
+        <LinearLayout
+            android:id="@+id/clear_cache_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:paddingTop="@dimen/space_18"
+            android:paddingBottom="@dimen/space_18"
+            android:gravity="center_vertical"
+            android:background="@drawable/item_bg_line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/space_8"
+                android:text="清除缓存"
+                android:textColor="@color/text_common"
+                android:textSize="@dimen/textSize_14"/>
+
+            <TextView
+                android:id="@+id/cache_size_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="10.0MB"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/textSize_12"
+                android:visibility="visible"
+                tools:visibility="visible"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/get_open_source_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:paddingTop="@dimen/space_18"
+            android:paddingBottom="@dimen/space_18"
+            android:gravity="center_vertical"
+            android:background="@drawable/item_bg_line"
+            android:text="获取源代码"
+            android:textColor="@color/text_common"
+            android:textSize="@dimen/textSize_14" />
+
+        <TextView
+            android:id="@+id/about_app_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:paddingTop="@dimen/space_18"
+            android:paddingBottom="@dimen/space_18"
+            android:gravity="center_vertical"
+            android:background="@drawable/item_bg_line"
+            android:text="关于 App"
+            android:textColor="@color/text_common"
+            android:textSize="@dimen/textSize_14" />
+
+        <TextView
+            android:id="@+id/about_phphub_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:paddingTop="@dimen/space_18"
+            android:paddingBottom="@dimen/space_18"
+            android:gravity="center_vertical"
+            android:background="@drawable/item_bg_line"
+            android:text="关于 PHPHub"
+            android:textColor="@color/text_common"
+            android:textSize="@dimen/textSize_14" />
+
+        <TextView
+            android:id="@+id/about_me_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:paddingTop="@dimen/space_18"
+            android:paddingBottom="@dimen/space_18"
+            android:text="关于我"
+            android:textColor="@color/text_common"
+            android:textSize="@dimen/textSize_14"
+            android:gravity="center_vertical"
+            android:background="@drawable/item_bg_line" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/version_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:paddingTop="@dimen/space_18"
+            android:paddingBottom="@dimen/space_18"
+            android:gravity="center_horizontal"
+            android:layout_gravity="bottom"
+            android:text="大象 1.0"
+            android:textColor="@color/text_content"
+            android:textSize="@dimen/textSize_14"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/mkdroid_suspend_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:background="#0f0">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="分割线"
+            android:textSize="8sp"
+            android:id="@+id/btn_line" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="8sp"
+            android:text="列表"
+            android:id="@+id/btn_list" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="8sp"
+            android:text="代码"
+            android:id="@+id/btn_code_block" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="8sp"
+            android:text="斜体"
+            android:id="@+id/btn_italic" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="8sp"
+            android:text="标题"
+            android:id="@+id/btn_title" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="图片"
+            android:textSize="8sp"
+            android:id="@+id/btn_pic" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="链接"
+            android:textSize="8sp"
+            android:id="@+id/btn_link" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="块引用"
+            android:textSize="8sp"
+            android:id="@+id/btn_cite" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="加粗"
+            android:textSize="8sp"
+            android:id="@+id/btn_strong" />
+
+    </LinearLayout>
+
+    <org.gemini.markdown.view.MarkdownEditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mkdroid_suspend_toolbar"
+        android:hint="请输入注释"
+        android:gravity="top"
+        android:padding="20dp"
+        android:id="@+id/mkdroid_markdown_edit_text"
+        android:background="@null" />
+
+</RelativeLayout>
