@@ -69,7 +69,8 @@ public abstract class BaseWebViewActivity extends BaseActivity {
         private void initSetting() {
             settings = contentView.getSettings();
 
-            settings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+            //注释掉缓存，缓存导致某些界面没法实时更新
+//            settings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
             settings.setJavaScriptEnabled(true);
         }
 
