@@ -25,7 +25,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.jun.elephant.R;
-import com.jun.elephant.entity.topic.TopicEntity;
 import com.jun.elephant.entity.user.MessageEntity;
 import com.jun.elephant.entity.user.UserEntity;
 import com.jun.elephant.ui.topic.details.TopicDetailsActivity;
@@ -72,7 +71,6 @@ public class UserMessageAdapter extends RecyclerView.Adapter<UserMessageAdapter.
     public void onBindViewHolder(MessageViewHolder holder, int position) {
         final MessageEntity mEntity = mMessageList.get(position);
         final UserEntity mUserEntity = mEntity.getFromUserEntity().getData();
-        TopicEntity mTopicEntity = mEntity.getTopic().getData();
 
         String msg = mEntity.getMessage();
 
@@ -97,7 +95,9 @@ public class UserMessageAdapter extends RecyclerView.Adapter<UserMessageAdapter.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mContext.startActivity(TopicDetailsActivity.newIntent(mContext, mEntity.getTopic().getData()));
+                if (mEntity.getTopic().getData() != null) {
+                    mContext.startActivity(TopicDetailsActivity.newIntent(mContext, mEntity.getTopic().getData()));
+                }
             }
         });
 
