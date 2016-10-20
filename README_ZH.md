@@ -120,6 +120,12 @@ PHPHub 是积极向上的 PHP & Laravel 开发者社区.
 
 界面设计灵感来自于知乎, 掘金 App.
 
+## 感谢
+
+- [PHPHub](https://laravel-china.org/)
+- [GitHubDaily](http://weibo.com/GitHubDaily)
+- [Android开发日常](http://weibo.com/AndroidDevDaily)
+
 ## License
 
 Copyright 2016 Freelander

@@ -125,6 +125,12 @@ Go to [PHPHub's official website](https://laravel-china.org/) and Login with Git
 
 UI design inspired by the ZHIHU, JUEJIN app.
 
+## Thanks
+
+- [PHPHub](https://laravel-china.org/)
+- [GitHubDaily](http://weibo.com/GitHubDaily)
+- [Android开发日常](http://weibo.com/AndroidDevDaily)
+
 ## License
 
 Copyright 2016 Freelander
