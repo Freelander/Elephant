@@ -16,6 +16,7 @@
 package com.jun.elephant.ui.main;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Build;
@@ -45,19 +46,20 @@ import com.google.gson.Gson;
 import com.jun.elephant.R;
 import com.jun.elephant.api.Networks;
 import com.jun.elephant.common.BaseActivity;
-import com.jun.elephant.util.OpenWebViewUtils;
 import com.jun.elephant.entity.DrawerMenuEntity;
 import com.jun.elephant.entity.user.UserInfoEntity;
 import com.jun.elephant.global.Constants;
 import com.jun.elephant.global.UserConstant;
 import com.jun.elephant.ui.adapter.DrawerMenuAdapter;
-import com.jun.elephant.ui.topic.list.TopicListByMeFragment;
 import com.jun.elephant.ui.login.LoginActivity;
+import com.jun.elephant.ui.topic.list.TopicListByForumFragment;
+import com.jun.elephant.ui.topic.list.TopicListByMeFragment;
 import com.jun.elephant.ui.user.info.UserInfoActivity;
 import com.jun.elephant.ui.user.message.UserMessageActivity;
-import com.jun.elephant.ui.topic.list.TopicListByForumFragment;
 import com.jun.elephant.ui.widget.MySimpleDraweeView;
 import com.jun.elephant.ui.widget.ThemeDialog;
+import com.jun.elephant.util.OpenWebViewUtils;
+import com.jun.elephant.util.PermissionsChecker;
 import com.jun.elephant.util.SharePreferencesHelper;
 
 import java.util.ArrayList;
@@ -66,6 +68,8 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import static com.jun.elephant.util.PermissionsChecker.REQUEST_STORAGE_PERMISSION;
 
 /**
  * Created by Jun on 2016/3/1.
@@ -242,7 +246,10 @@ public class MainActivity extends BaseActivity implements Toolbar.OnMenuItemClic
             case R.id.user_iv:
                 if (getUserConstant().isLogin()) {
                     startActivity(UserInfoActivity.newIntent(this, getUserConstant().getUserData().getData().getId()));
-                } else {
+                    return;
+                }
+                //判断一下是否开启权限
+                if (PermissionsChecker.lacksPermissions(this, PermissionsChecker.photosPermissions)) {
                     Intent intent = new Intent(this, LoginActivity.class);
                     startActivityForResult(intent, Constants.Activity.LoginActivity);
                 }
@@ -472,6 +479,25 @@ public class MainActivity extends BaseActivity implements Toolbar.OnMenuItemClic
                 break;
         }
         changeTheme();
+    }
+
+    /**
+     * 权限操作回调
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == REQUEST_STORAGE_PERMISSION) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) { //允许
+                Intent intent = new Intent(this, LoginActivity.class);
+                startActivityForResult(intent, Constants.Activity.LoginActivity);
+            } else { // 拒绝
+                showShortToast(getString(R.string.toast_permission_fail));
+            }
+        }
     }
 
 }

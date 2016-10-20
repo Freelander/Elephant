@@ -58,6 +58,7 @@
     <string name="toast_no_content">内容不能空</string>
     <string name="toast_opt_fail">操作异常</string>
     <string name="toast_publish_fail">发布失败</string>
+    <string name="toast_permission_fail">拒绝将导致某些功能不能正常使用</string>
 
     <string name="about_phphub">关于 PHPHub</string>
     <string name="about_me">关于我</string>
