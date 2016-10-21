@@ -63,7 +63,7 @@ You can checkout the others open source projects of PHPHub in the following list
 ## Build environment
 
 1. Min Android SDK version 4.0+
-2. Andriod Studio 2.2.1
+2. Android Studio 2.2.1
 3. Gradle version 2.14.1
 4. Gradle plugin version 2.2.1
 5. Build tools version 24.0.2
