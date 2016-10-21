@@ -34,6 +34,8 @@ PHPHub 是积极向上的 PHP & Laravel 开发者社区.
 
 为什么给 App 取名为“大象”呢？因为大象是 PHP 的吉祥物, 至于由来历史, 可以去[这里](http://www.phpchina.com/blog-56751-183726.html)了解一下
 
+#### [Api 文档](https://laravel-china.org/topics/3097)
+
 ## PHPHub 相关项目
 
 * [PHPHub-iOS](https://github.com/Aufree/phphub-ios) by [@Aufree](https://github.com/Aufree)
@@ -59,7 +61,7 @@ PHPHub 是积极向上的 PHP & Laravel 开发者社区.
 ## 运行环境
 
 1. Min Android SDK version 4.0+
-2. Andriod Studio 2.2.1
+2. Android Studio 2.2.1
 3. Gradle version 2.14.1
 4. Gradle plugin version 2.2.1
 5. Build tools version 24.0.2
@@ -77,14 +79,6 @@ PHPHub 是积极向上的 PHP & Laravel 开发者社区.
 3.最后将项目导入 Android Studio 运行即可, 祝你好运!
 
 ## 登录帮助
-
-### 开发环境
-
-请使用以下二维码登录
-
-![](http://ww3.sinaimg.cn/large/76dc7f1bgw1exrg86f5ubj20ml0dsq45.jpg)
-
-### 生产环境
 
 打开 [PHPHub](https://laravel-china.org/) 桌面 Web 端, 进入 Web 版个人中心, 对准如下位置的二维码扫描: 
 

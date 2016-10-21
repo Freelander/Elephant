@@ -34,7 +34,7 @@ Elephant is PHPHub Community Android unofficial client, App UI style follows the
 
 Why App named "Elephant"? Because the elephant is the PHP mascot, as the origin of history, you can go [here](http://www.phpchina.com/blog-56751-183726.html) to find out. 
 
-#### [中文文档](https://github.com/Freelander/Elephant/blob/master/README_ZH.md)
+#### [中文文档](https://github.com/Freelander/Elephant/blob/master/README_ZH.md) &nbsp;&nbsp;&nbsp;&nbsp; [Api 文档](https://laravel-china.org/topics/3097)
 
 ## PHPHub related projects
 
@@ -63,7 +63,7 @@ You can checkout the others open source projects of PHPHub in the following list
 ## Build environment
 
 1. Min Android SDK version 4.0+
-2. Andriod Studio 2.2.1
+2. Android Studio 2.2.1
 3. Gradle version 2.14.1
 4. Gradle plugin version 2.2.1
 5. Build tools version 24.0.2
@@ -81,14 +81,6 @@ You can checkout the others open source projects of PHPHub in the following list
 3.Finally, Will the project import Android Studio, click to run, I wish you good luck!
 
 ## How should I Login?
-
-### Development Environment
-
-Scan this QRCode by using Elephant application.
-
-![](http://ww3.sinaimg.cn/large/76dc7f1bgw1exrg86f5ubj20ml0dsq45.jpg)
-
-### Production Environment
 
 Go to [PHPHub's official website](https://laravel-china.org/) and Login with GitHub. then find your QRCode in your personal page. It should look like this:
 
