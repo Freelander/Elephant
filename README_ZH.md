@@ -14,17 +14,17 @@ Weibo: http://weibo.com/gaojunhuang
     <a href="https://travis-ci.org/Freelander/Elephant">
         <img src="https://travis-ci.org/Freelander/Elephant.svg?branch=master">
     </a>
-    <a href="http://weibo.com/gaojunhuang">
-        <img src="https://img.shields.io/badge/contact-%40Freelander-orange.svg">
+    <a href="https://android-arsenal.com/api?level=15">
+        <img src="https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat" border="0" alt="API">
     </a>
     <a href="https://github.com/Freelander/Elephant/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg?style=flat">
     </a>
-    <a href="http://fir.im/elephpant">
-        <img src="https://img.shields.io/badge/downloads-fir.im-yellowgreen.svg">
+    <a href="http://weibo.com/gaojunhuang">
+        <img src="https://img.shields.io/badge/contact-%40Freelander-orange.svg">
     </a>
-     <a href="https://android-arsenal.com/api?level=15">
-        <img src="https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat" border="0" alt="API">
+    <a href="http://fir.im/elephpant">
+        <img src="https://img.shields.io/badge/download-fir.im-blue.svg">
     </a>
 </p>
 
