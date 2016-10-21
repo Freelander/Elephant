@@ -75,11 +75,11 @@ public class TopicDetailsActivity extends BaseFrameWebViewActivity<TopicDetailsP
 
     private VoteDialog mVoteDialog;
 
-    public static Intent newIntent(Context context, TopicEntity topicEntity) {
+    private int mTopicId;
+
+    public static Intent newIntent(Context context, int topicId) {
         Intent intent = new Intent(context, TopicDetailsActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putParcelable(Constants.Key.TOPIC, topicEntity);
-        intent.putExtras(bundle);
+        intent.putExtra(Constants.Key.TOPIC_ID, topicId);
         return intent;
     }
 
@@ -93,7 +93,7 @@ public class TopicDetailsActivity extends BaseFrameWebViewActivity<TopicDetailsP
     @Override
     public void initData() {
         super.initData();
-        mTopicEntity = getIntent().getExtras().getParcelable(Constants.Key.TOPIC);
+        mTopicId = getIntent().getIntExtra(Constants.Key.TOPIC_ID, 1);
         mVoteDialog = new VoteDialog(this);
     }
 
@@ -102,13 +102,6 @@ public class TopicDetailsActivity extends BaseFrameWebViewActivity<TopicDetailsP
         super.initView();
         setToolbar(mToolBar, "");
         mToolBar.inflateMenu(R.menu.menu_topic);
-
-        if (getUserConstant().isLogin()) {
-            mPresenter.getDetailsInfo(mTopicEntity.getId());
-        } else {
-            initViewDetail(mTopicEntity);
-        }
-
     }
 
     @Override
@@ -116,6 +109,13 @@ public class TopicDetailsActivity extends BaseFrameWebViewActivity<TopicDetailsP
         super.initListener();
         mToolBar.setOnMenuItemClickListener(this);
         mVoteDialog.setOnVoteDialogClickListener(this);
+    }
+
+    @Override
+    public void initLoad() {
+        super.initLoad();
+
+        mPresenter.getDetailsInfo(mTopicId);
     }
 
     private void initViewDetail(TopicEntity mTopicEntity) {

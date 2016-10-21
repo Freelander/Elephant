@@ -28,9 +28,9 @@ import android.widget.TextView;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.jun.elephant.R;
 import com.jun.elephant.entity.topic.CategoryEntity;
-import com.jun.elephant.entity.topic.TopicEntity;
-import com.jun.elephant.mvpframe.base.BaseFrameActivity;
+import com.jun.elephant.entity.topic.TopicPublishEntity;
 import com.jun.elephant.global.Constants;
+import com.jun.elephant.mvpframe.base.BaseFrameActivity;
 import com.jun.elephant.ui.main.TopicPreviewActivity;
 import com.jun.elephant.ui.topic.details.TopicDetailsActivity;
 import com.jun.elephant.util.JLog;
@@ -158,7 +158,6 @@ public class TopicPublishActivity extends BaseFrameActivity<TopicPublishPresente
         Editable e = mTopicContentEdt.getText();
         switch (v.getId()) {
             case R.id.topic_node_tv:
-//                mNodeListDialog.show();
                 initListDialog();
                 break;
             case R.id.edit_bold_ib:
@@ -253,13 +252,9 @@ public class TopicPublishActivity extends BaseFrameActivity<TopicPublishPresente
     }
 
     @Override
-    public void publishTopicSuccess(TopicEntity topicEntity) {
+    public void publishTopicSuccess(TopicPublishEntity.DataBean topicEntity) {
         if (topicEntity != null) {
-
-            Bundle bundle = new Bundle();
-            bundle.putParcelable(Constants.Key.TOPIC, topicEntity);
-            openActivity(TopicDetailsActivity.class, bundle);
-
+            startActivity(TopicDetailsActivity.newIntent(this, topicEntity.getId()));
             finish();
         }
     }
@@ -279,5 +274,6 @@ public class TopicPublishActivity extends BaseFrameActivity<TopicPublishPresente
         super.onRequestError(msg);
         JLog.e("publish fail msg === ",  msg);
         showShortToast(getString(R.string.toast_publish_fail));
+        mLoadingDialog.dismiss();
     }
 }

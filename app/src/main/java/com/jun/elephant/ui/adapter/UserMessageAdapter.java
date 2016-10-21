@@ -96,7 +96,7 @@ public class UserMessageAdapter extends RecyclerView.Adapter<UserMessageAdapter.
             @Override
             public void onClick(View v) {
                 if (mEntity.getTopic().getData() != null) {
-                    mContext.startActivity(TopicDetailsActivity.newIntent(mContext, mEntity.getTopic().getData()));
+                    mContext.startActivity(TopicDetailsActivity.newIntent(mContext, mEntity.getTopic().getData().getId()));
                 }
             }
         });

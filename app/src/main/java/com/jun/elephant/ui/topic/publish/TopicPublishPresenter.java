@@ -16,9 +16,11 @@
 package com.jun.elephant.ui.topic.publish;
 
 import com.jun.elephant.entity.topic.CategoryEntity;
-import com.jun.elephant.entity.topic.TopicDetailEntity;
+import com.jun.elephant.entity.topic.TopicPublishEntity;
 
 import rx.Observer;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action0;
 
 /**
  * Created by Jun on 2016/10/19.
@@ -43,7 +45,7 @@ public class TopicPublishPresenter extends TopicPublishContract.Presenter {
         }
     };
 
-    private Observer<TopicDetailEntity> mTopicDetailObserver = new Observer<TopicDetailEntity>() {
+    private Observer<TopicPublishEntity> mTopicDetailObserver = new Observer<TopicPublishEntity>() {
         @Override
         public void onCompleted() {
             mView.onRequestEnd();
@@ -56,8 +58,8 @@ public class TopicPublishPresenter extends TopicPublishContract.Presenter {
         }
 
         @Override
-        public void onNext(TopicDetailEntity topicDetailEntity) {
-            mView.publishTopicSuccess(topicDetailEntity.getData());
+        public void onNext(TopicPublishEntity topicPublishEntity) {
+            mView.publishTopicSuccess(topicPublishEntity.getData());
         }
     };
 
@@ -69,6 +71,13 @@ public class TopicPublishPresenter extends TopicPublishContract.Presenter {
     @Override
     public void publishTopic(String title, String body, String categoryId) {
         mRxManager.add(mModel.publishTopic(title, body, categoryId)
+                .doOnSubscribe(new Action0() {
+                    @Override
+                    public void call() {
+                        mView.onRequestStart();
+                    }
+                })
+                .subscribeOn(AndroidSchedulers.mainThread())
                 .subscribe(mTopicDetailObserver));
     }
 }

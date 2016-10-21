@@ -16,8 +16,7 @@
 package com.jun.elephant.ui.topic.publish;
 
 import com.jun.elephant.entity.topic.CategoryEntity;
-import com.jun.elephant.entity.topic.TopicDetailEntity;
-import com.jun.elephant.entity.topic.TopicEntity;
+import com.jun.elephant.entity.topic.TopicPublishEntity;
 import com.jun.elephant.mvpframe.BaseModel;
 import com.jun.elephant.mvpframe.BasePresenter;
 import com.jun.elephant.mvpframe.BaseView;
@@ -32,14 +31,14 @@ public interface TopicPublishContract {
     interface Model extends BaseModel {
         Observable<CategoryEntity> getCategories();
 
-        Observable<TopicDetailEntity> publishTopic(String title, String body, String categoryId);
+        Observable<TopicPublishEntity> publishTopic(String title, String body, String categoryId);
     }
 
     interface View extends BaseView {
 
         void getCategory(CategoryEntity categoryEntity);
 
-        void publishTopicSuccess(TopicEntity topicEntity);
+        void publishTopicSuccess(TopicPublishEntity.DataBean topicEntity);
 
     }
 

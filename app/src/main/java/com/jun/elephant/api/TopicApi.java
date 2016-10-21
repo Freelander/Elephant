@@ -19,6 +19,7 @@ import com.google.gson.JsonObject;
 import com.jun.elephant.entity.topic.CategoryEntity;
 import com.jun.elephant.entity.topic.TopicDetailEntity;
 import com.jun.elephant.entity.topic.TopicListEntity;
+import com.jun.elephant.entity.topic.TopicPublishEntity;
 import com.jun.elephant.entity.topic.TopicReplyEntity;
 
 import java.util.Map;
@@ -35,20 +36,20 @@ import rx.Observable;
 public interface TopicApi {
 
     @GET("topics/{topicId}")
-    Observable<TopicDetailEntity> getTopicDetail(@Path("topicId") int topicId,
+    Observable<TopicDetailEntity> getTopicDetail(@Path("topicId") double topicId,
                                            @QueryMap Map<String, String> options);
 
     @GET("topics")
     Observable<TopicListEntity> getTopics(@QueryMap Map<String, String> options);
 
     @POST("topics/{topicId}/vote-up")
-    Observable<JsonObject> voteUp(@Path("topicId") int topicId);
+    Observable<JsonObject> voteUp(@Path("topicId") double topicId);
 
     @POST("topics/{topicId}/vote-down")
-    Observable<JsonObject> voteDown(@Path("topicId") int topicId);
+    Observable<JsonObject> voteDown(@Path("topicId") double topicId);
 
     @POST("topics")
-    Observable<TopicDetailEntity> publishTopic(@QueryMap Map<String, String> options);
+    Observable<TopicPublishEntity> publishTopic(@QueryMap Map<String, String> options);
 
     @GET("categories")
     Observable<CategoryEntity> getCategories();

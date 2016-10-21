@@ -17,6 +17,7 @@ package com.jun.elephant.ui.topic.reply;
 
 import com.jun.elephant.api.Networks;
 import com.jun.elephant.entity.topic.TopicReplyEntity;
+import com.jun.elephant.mvpframe.rx.RxSchedulers;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,6 +40,7 @@ public class TopicReplyModel implements TopicReplyContract.Model {
     @Override
     public Observable<TopicReplyEntity> reply(int topicId, String body) {
             return Networks.getInstance().getTopicApi()
-                    .publishReply(getOptions(topicId, body));
+                    .publishReply(getOptions(topicId, body))
+                    .compose(RxSchedulers.<TopicReplyEntity>io_main());
     }
 }

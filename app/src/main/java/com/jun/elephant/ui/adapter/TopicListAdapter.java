@@ -95,7 +95,7 @@ public class TopicListAdapter extends RecyclerView.Adapter<TopicListAdapter.Topi
         holder.mBgaRl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mContext.startActivity(TopicDetailsActivity.newIntent(mContext, item));
+                mContext.startActivity(TopicDetailsActivity.newIntent(mContext, item.getId()));
             }
         });
 

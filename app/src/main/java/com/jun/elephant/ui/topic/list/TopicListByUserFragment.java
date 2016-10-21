@@ -3,6 +3,7 @@ package com.jun.elephant.ui.topic.list;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.TextView;
 
 import com.jun.elephant.R;
 import com.jun.elephant.entity.topic.TopicEntity;
@@ -77,6 +78,11 @@ public class TopicListByUserFragment extends BaseFrameFragment<TopicPresenter, T
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.setAdapter(mAdapter);
         mSwipeLayout.setMode(PtrFrameLayout.Mode.LOAD_MORE);
+
+        if (mType == Constants.User.USER_TOPIC_FOLLOW) {
+            TextView mErrorTv = (TextView) mMultiStateView.getView(MultiStateView.VIEW_STATE_ERROR);
+            mErrorTv.setText("该处接口暂时没有，给自己留下个坑 ~_~ ");
+        }
     }
 
     @Override

@@ -22,6 +22,7 @@ import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
 
@@ -113,6 +114,7 @@ public class TopicCommentListActivity extends BaseFrameWebViewActivity<TopicRepl
 
     @Override
     public void replySuccess(TopicReplyEntity topicReplyEntity) {
+        mCommentEdt.setText("");
         if (topicReplyEntity.getData() != null) mWebView.loadUrl(mCommentUrl, getAuth());
     }
 
@@ -123,6 +125,19 @@ public class TopicCommentListActivity extends BaseFrameWebViewActivity<TopicRepl
 
     @Override
     public void onRequestEnd() {
+        hideKeyboard(mCommentEdt);
+    }
 
+    @Override
+    public void onInternetError() {
+        super.onInternetError();
+        showShortToast(getString(R.string.toast_comment_fail));
+    }
+
+    private void hideKeyboard(View view) {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (imm.isActive()) {
+            imm.hideSoftInputFromWindow(view.getApplicationWindowToken(), 0);
+        }
     }
 }

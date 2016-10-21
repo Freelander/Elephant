@@ -65,7 +65,7 @@ public class WebAppClient extends WebViewClient {
     private void initSetting() {
         settings = contentView.getSettings();
 
-        settings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+//        settings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         settings.setJavaScriptEnabled(true);
     }
 
