@@ -12,8 +12,8 @@ android {
         applicationId "com.jun.elephant"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 3
-        versionName "1.0"
+        versionCode 5
+        versionName "1.0.2"
 
         buildConfigField("String", "CLIENT_ID", "\"${CLIENT_ID}\"")
         buildConfigField("String", "CLIENT_SECRET", "\"${CLIENT_SECRET}\"")
