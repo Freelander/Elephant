@@ -6,6 +6,8 @@ import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
 
+import com.jun.elephant.util.ResUtil;
+
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.header.MaterialHeader;
 
@@ -63,6 +65,7 @@ public class MySwipeRefreshLayout extends PtrFrameLayout {
     }
 
     private void initConfig() {
+        setOffsetToRefresh(ResUtil.dp2px(getContext(), 100));
         /**
          * 阻尼系数
          * 默认: 1.7f，越大，感觉下拉时越吃力
