@@ -66,9 +66,10 @@
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
+                    android:theme="@style/Custom.Theme.ToolBar"
                     app:layout_collapseMode="pin"
                     app:contentInsetStartWithNavigation="0dp"
-                    android:theme="@style/Custom.Theme.ToolBar"
+                    app:titleTextAppearance="@style/toolbar_textAppearance"
                     app:navigationIcon="?attr/navBackIcon"/>
 
             </android.support.design.widget.CollapsingToolbarLayout>

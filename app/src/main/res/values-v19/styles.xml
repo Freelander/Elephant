@@ -88,8 +88,8 @@
     </style>
 
     <style name="Custom_Theme" parent="AppTheme">
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
         <!--<item name="android:windowIsTranslucent">true</item>-->
     </style>
 
@@ -110,6 +110,7 @@
 
     <style name="toolbar_textAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
         <item name="android:textSize">@dimen/textSize_18</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
 </resources>
