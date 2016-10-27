@@ -21,9 +21,10 @@ import android.text.TextUtils;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.google.zxing.Result;
+import com.jun.elephant.R;
 import com.jun.elephant.entity.user.UserInfoEntity;
-import com.jun.elephant.mvpframe.base.BaseFrameActivity;
 import com.jun.elephant.global.Constants;
+import com.jun.elephant.mvpframe.base.BaseFrameActivity;
 import com.jun.elephant.util.JLog;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
@@ -102,4 +103,10 @@ public class LoginActivity extends BaseFrameActivity<LoginPresenter, LoginModel>
         finish();
     }
 
+    @Override
+    public void onInternetError() {
+        super.onInternetError();
+        showShortToast(getString(R.string.toast_login_fail));
+        mScannerView.resumeCameraPreview(this); //重置扫描
+    }
 }
