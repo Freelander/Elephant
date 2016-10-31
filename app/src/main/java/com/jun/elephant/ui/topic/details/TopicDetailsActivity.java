@@ -77,6 +77,8 @@ public class TopicDetailsActivity extends BaseFrameWebViewActivity<TopicDetailsP
 
     private int mTopicId;
 
+    private boolean isLoadFinish; //记录网络加载是否完成，即是否成功取回帖子详情数据
+
     public static Intent newIntent(Context context, int topicId) {
         Intent intent = new Intent(context, TopicDetailsActivity.class);
         intent.putExtra(Constants.Key.TOPIC_ID, topicId);
@@ -163,6 +165,8 @@ public class TopicDetailsActivity extends BaseFrameWebViewActivity<TopicDetailsP
 
     @OnClick({R.id.point_tv, R.id.comment_tv, R.id.favorite_tv, R.id.follow_tv, R.id.user_img_iv})
     public void onClick(View view) {
+        if (!isLoadFinish) return; //若还没有加载完成阻止继续下面操作
+
         switch (view.getId()) {
             case R.id.point_tv:
                 if (!getUserConstant().isLogin()) {
@@ -186,7 +190,8 @@ public class TopicDetailsActivity extends BaseFrameWebViewActivity<TopicDetailsP
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_share:
-                ShareUtil.share(this, "分享 " + mTopicEntity.getUser().getData().getName() + " 的文章" + mTopicEntity.getTitle()
+                if (isLoadFinish)
+                    ShareUtil.share(this, "分享 " + mTopicEntity.getUser().getData().getName() + " 的文章" + mTopicEntity.getTitle()
                         + " " + mTopicEntity.getLinks().getWebUrl() + "「来自:大象」");
                 break;
         }
@@ -312,5 +317,6 @@ public class TopicDetailsActivity extends BaseFrameWebViewActivity<TopicDetailsP
     public void getDetailsInfo(TopicDetailEntity topicDetailEntity) {
         mTopicEntity = topicDetailEntity.getData();
         initViewDetail(topicDetailEntity.getData());
+        isLoadFinish = true;
     }
 }
