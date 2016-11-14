@@ -1,5 +1,3 @@
-> 本人目前正在找工作, 具体工作经验以及个人经历请移步到我的[网页版简历](http://freelander.github.io/resume/), 希望能得到大家推荐, 谢谢!
-
 <h4>
     <font color="#777">欢迎到 Github 或者微博关注我</font>
 </h4> 
