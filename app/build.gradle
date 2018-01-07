@@ -5,19 +5,22 @@ def releaseTime() {
 }
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.3"
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         applicationId "com.jun.elephant"
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 27
         versionCode 5
         versionName "1.0.2"
 
         buildConfigField("String", "CLIENT_ID", "\"${CLIENT_ID}\"")
         buildConfigField("String", "CLIENT_SECRET", "\"${CLIENT_SECRET}\"")
         buildConfigField("String", "API_BASE_URL", "\"${API_BASE_URL}\"")
+
+        manifestPlaceholders = [UMENG_APPKEY : "\"${UMENG_APPKEY}\"",
+                                UMENG_CHANNEL_VALUE : "\"${UMENG_CHANNEL_VALUE}\""]
 
         println("CLIENT_ID ========== " + "\"${CLIENT_ID}\"")
         println("CLIENT_SECRET ========== " + "\"${CLIENT_SECRET}\"")
@@ -69,6 +72,8 @@ android {
             signingConfig signingConfigs.debug
             //显示 Log
             buildConfigField "boolean", "LOG_DEBUG", "true"
+
+            matchingFallbacks = ['release', 'debug']
         }
         release {
             minifyEnabled false
@@ -85,19 +90,24 @@ android {
 
             // 多渠道打包
             applicationVariants.all { variant ->
-                variant.outputs.each { output ->
+                variant.outputs.all { output ->
                     def outputFile = output.outputFile
                     if (outputFile != null && outputFile.name.endsWith('.apk')) {
                         // 输出apk名称为Elephant_v1.0_2016-10-11_fir.apk
-                        def fileName = "Elephant_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
-                        output.outputFile = new File(outputFile.parent, fileName)
+                        def fileName = "Elephant_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors.name}.apk"
+                        output.outputFileName = new File(outputFile.parent, fileName)
                     }
                 }
             }
+            matchingFallbacks = ['release', 'debug']
+        }
+
+        innerTest {
+            matchingFallbacks = ['debug', 'release']
         }
 
         //渠道
-        productFlavors {
+        productFlavors.all {
             fir {
                 manifestPlaceholders = [UMENG_CHANNEL_VALUE: "fir", UMENG_APPKEY: UMENG_APPKEY]
             }
@@ -121,7 +131,7 @@ repositories {
     }
 }
 
-def SUPPORT_VERSION = "24.2.1"
+def SUPPORT_VERSION = "27.0.2"
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
@@ -131,8 +141,8 @@ dependencies {
     compile 'com.android.support:support-v4:' + SUPPORT_VERSION
     compile 'com.android.support:recyclerview-v7:' + SUPPORT_VERSION
     compile 'com.android.support:percent:' + SUPPORT_VERSION
-    compile project(':liraries:ptr-lib')
-    compile project(':liraries:markdown')
+    implementation project(':liraries:ptr-lib')
+    implementation project(':liraries:markdown')
     // If you want to use the GPU Filters
     //RxJava 与 Retrofit
     //辅助
@@ -157,12 +167,12 @@ dependencies {
     compile 'com.github.polok.localify:localify:1.0.0'
     compile 'com.github.ongakuer:PhotoDraweeView:a14f105aaa'
     compile 'com.commonsware.cwac:anddown:0.2.4'
-    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.umeng.analytics:analytics:6.1.3'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.squareup.okio:okio:1.6.0'
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.github.orhanobut:logger:1.12'
     compile 'com.pnikosis:materialish-progress:1.7'
-    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.android.support:support-v4:27.0.2'
     testCompile 'junit:junit:4.12'
 }

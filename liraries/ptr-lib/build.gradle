@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '24.0.3'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 24
+        targetSdkVersion 27
     }
 
     lintOptions {
@@ -25,6 +25,17 @@ android {
         }
 
         androidTest.setRoot('tests')
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
     }
 }
 
