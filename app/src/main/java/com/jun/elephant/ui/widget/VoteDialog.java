@@ -28,7 +28,7 @@ import android.widget.TextView;
 import com.jun.elephant.R;
 import com.jun.elephant.entity.topic.TopicEntity;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -38,9 +38,9 @@ import butterknife.ButterKnife;
 public class VoteDialog extends Dialog implements View.OnClickListener {
 
     public OnVoteDialogClickListener mOnVoteDialogClickListener;
-    @Bind(R.id.vote_up_tv)
+    @BindView(R.id.vote_up_tv)
     TextView mVoteUpTv;
-    @Bind(R.id.vote_down_tv)
+    @BindView(R.id.vote_down_tv)
     TextView mVoteDownTv;
     private Context mContext;
     private TopicEntity mTopicEntity;

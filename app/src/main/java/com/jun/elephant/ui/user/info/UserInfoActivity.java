@@ -41,17 +41,17 @@ import com.jun.elephant.R;
 import com.jun.elephant.common.FragmentAdapter;
 import com.jun.elephant.entity.user.UserEntity;
 import com.jun.elephant.entity.user.UserInfoEntity;
-import com.jun.elephant.mvpframe.base.BaseFrameActivity;
 import com.jun.elephant.global.Constants;
+import com.jun.elephant.mvpframe.base.BaseFrameActivity;
 import com.jun.elephant.ui.main.WebViewActivity;
-import com.jun.elephant.ui.user.reply.UserReplyFragment;
 import com.jun.elephant.ui.topic.list.TopicListByUserFragment;
+import com.jun.elephant.ui.user.reply.UserReplyFragment;
 import com.jun.elephant.util.ShareUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import jp.wasabeef.glide.transformations.BlurTransformation;
@@ -61,41 +61,41 @@ import jp.wasabeef.glide.transformations.BlurTransformation;
  */
 public class UserInfoActivity extends BaseFrameActivity<UserInfoPresenter, UserInfoModel> implements UserInfoContract.View, Toolbar.OnMenuItemClickListener {
 
-    @Bind(R.id.main_bg_iv)
+    @BindView(R.id.main_bg_iv)
     ImageView mUserImgBg;
-    @Bind(R.id.toolBar)
+    @BindView(R.id.toolBar)
     Toolbar mToolBar;
-    @Bind(R.id.user_name_tv)
+    @BindView(R.id.user_name_tv)
     TextView mUserNameTv;
-    @Bind(R.id.user_real_name_tv)
+    @BindView(R.id.user_real_name_tv)
     TextView mUserRealNameTv;
-    @Bind(R.id.tabLayout)
+    @BindView(R.id.tabLayout)
     TabLayout mTabLayout;
-    @Bind(R.id.viewPager)
+    @BindView(R.id.viewPager)
     ViewPager mViewPager;
-    @Bind(R.id.collapsing_toolbar)
+    @BindView(R.id.collapsing_toolbar)
     CollapsingToolbarLayout mCollapsingToolbar;
-    @Bind(R.id.appBarLayout)
+    @BindView(R.id.appBarLayout)
     AppBarLayout mAppBarLayout;
-    @Bind(R.id.user_address_tv)
+    @BindView(R.id.user_address_tv)
     TextView mUserAddressTv;
-    @Bind(R.id.user_avatar_civ)
+    @BindView(R.id.user_avatar_civ)
     SimpleDraweeView mUserAvatarCiv;
-    @Bind(R.id.user_info_ll)
+    @BindView(R.id.user_info_ll)
     LinearLayout mUserInfoLl;
-    @Bind(R.id.signature_tv)
+    @BindView(R.id.signature_tv)
     TextView mSignatureTv;
-    @Bind(R.id.user_share_tv)
+    @BindView(R.id.user_share_tv)
     TextView mUserShareTv;
-    @Bind(R.id.user_reply_tv)
+    @BindView(R.id.user_reply_tv)
     TextView mUserReplyTv;
-    @Bind(R.id.user_follow_tv)
+    @BindView(R.id.user_follow_tv)
     TextView mUserFollowTv;
-    @Bind(R.id.edit_tv)
+    @BindView(R.id.edit_tv)
     TextView mSettingTv;
-    @Bind(R.id.user_focus_ll)
+    @BindView(R.id.user_focus_ll)
     LinearLayout mUserFocusLl;
-    @Bind(R.id.page_title_tv)
+    @BindView(R.id.page_title_tv)
     TextView mPageTitleTv;
 
     private TopicListByUserFragment mTopicFragment;

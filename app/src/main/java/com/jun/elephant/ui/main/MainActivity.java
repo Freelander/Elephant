@@ -65,7 +65,7 @@ import com.jun.elephant.util.SharePreferencesHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -79,29 +79,29 @@ public class MainActivity extends BaseActivity implements Toolbar.OnMenuItemClic
         DrawerMenuAdapter.OnMenuItemClickListener,
         MaterialDialog.SingleButtonCallback {
 
-    @Bind(R.id.toolBar)
+    @BindView(R.id.toolBar)
     Toolbar mToolBar;
-    @Bind(R.id.container)
+    @BindView(R.id.container)
     FrameLayout mContainer;
-    @Bind(R.id.main_content)
+    @BindView(R.id.main_content)
     LinearLayout mMainContentLl;
-    @Bind(R.id.name_tv)
+    @BindView(R.id.name_tv)
     TextView mNameTv;
-    @Bind(R.id.user_email_tv)
+    @BindView(R.id.user_email_tv)
     TextView mUserEmailTv;
-    @Bind(R.id.menu_down_iv)
+    @BindView(R.id.menu_down_iv)
     ImageView mMenuDownIv;
-    @Bind(R.id.drawer_menu_rc)
+    @BindView(R.id.drawer_menu_rc)
     RecyclerView mDrawerMenuRc;
-    @Bind(R.id.navigation_view)
+    @BindView(R.id.navigation_view)
     LinearLayout mNavigationView;
-    @Bind(R.id.drawerLayout)
+    @BindView(R.id.drawerLayout)
     DrawerLayout mDrawerLayout;
-    @Bind(R.id.user_iv)
+    @BindView(R.id.user_iv)
     MySimpleDraweeView mUserImgIv;
-    @Bind(R.id.login_tv)
+    @BindView(R.id.login_tv)
     TextView mLoginTv;
-    @Bind(R.id.login_success_rl)
+    @BindView(R.id.login_success_rl)
     RelativeLayout mLoginShowRl;
 
     private List<DrawerMenuEntity> mMainMenuList, mMyMenuList;

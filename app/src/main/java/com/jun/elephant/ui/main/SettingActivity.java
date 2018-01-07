@@ -23,18 +23,18 @@ import android.widget.TextView;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.jun.elephant.util.FileUtils;
-import com.jun.elephant.util.ShareUtil;
-import com.jun.elephant.util.SystemUtil;
 import com.jun.elephant.Elephant;
 import com.jun.elephant.R;
 import com.jun.elephant.common.BaseActivity;
-import com.jun.elephant.util.OpenWebViewUtils;
 import com.jun.elephant.global.Constants;
+import com.jun.elephant.util.FileUtils;
+import com.jun.elephant.util.OpenWebViewUtils;
+import com.jun.elephant.util.ShareUtil;
+import com.jun.elephant.util.SystemUtil;
 
 import java.io.File;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -43,11 +43,11 @@ import butterknife.OnClick;
  */
 public class SettingActivity extends BaseActivity implements MaterialDialog.SingleButtonCallback {
 
-    @Bind(R.id.toolBar)
+    @BindView(R.id.toolBar)
     Toolbar mToolBar;
-    @Bind(R.id.version_tv)
+    @BindView(R.id.version_tv)
     TextView mVersionTv;
-    @Bind(R.id.cache_size_tv)
+    @BindView(R.id.cache_size_tv)
     TextView mCacheSizeTv;
 
     private MaterialDialog.Builder mDialog;

@@ -41,7 +41,7 @@ import org.gemini.markdown.view.MarkdownEditText;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -51,15 +51,15 @@ import butterknife.OnClick;
 public class TopicPublishActivity extends BaseFrameActivity<TopicPublishPresenter, TopicPublishModel>
         implements Toolbar.OnMenuItemClickListener, TopicPublishContract.View {
 
-    @Bind(R.id.toolBar)
+    @BindView(R.id.toolBar)
     Toolbar mToolBar;
-    @Bind(R.id.topic_title_edt)
+    @BindView(R.id.topic_title_edt)
     EditText mTopicTitleEdt;
-    @Bind(R.id.topic_node_tv)
+    @BindView(R.id.topic_node_tv)
     TextView mTopicNodeTv;
-    @Bind(R.id.topic_content_edt)
+    @BindView(R.id.topic_content_edt)
     MarkdownEditText mTopicContentEdt;
-    @Bind(R.id.edit_opt_ll)
+    @BindView(R.id.edit_opt_ll)
     LinearLayout mEditOptLl;
 
     private MaterialDialog.Builder mNodeListDialog;

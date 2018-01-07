@@ -18,26 +18,26 @@ package com.jun.elephant.ui.user.reply;
 import android.os.Bundle;
 import android.webkit.WebView;
 
-import com.jun.elephant.ui.widget.MultiStateView;
 import com.jun.elephant.R;
 import com.jun.elephant.api.Networks;
 import com.jun.elephant.common.BaseFragment;
 import com.jun.elephant.common.WebAppClient;
 import com.jun.elephant.global.Constants;
+import com.jun.elephant.ui.widget.MultiStateView;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
  * Created by Jun on 2016/5/8.
  */
 public class UserReplyFragment extends BaseFragment {
-    @Bind(R.id.webView)
+    @BindView(R.id.webView)
     WebView mWebView;
-    @Bind(R.id.multiStateView)
+    @BindView(R.id.multiStateView)
     MultiStateView mMultiStateView;
 
     private String mWebUrl;
@@ -65,7 +65,6 @@ public class UserReplyFragment extends BaseFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 
     public Map<String, String> getAuth() {

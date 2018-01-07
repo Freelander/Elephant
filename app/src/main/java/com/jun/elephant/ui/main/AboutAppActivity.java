@@ -31,7 +31,7 @@ import com.jun.elephant.R;
 import com.jun.elephant.common.BaseActivity;
 import com.jun.elephant.util.SystemUtil;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -39,13 +39,13 @@ import butterknife.ButterKnife;
  */
 public class AboutAppActivity extends BaseActivity {
 
-    @Bind(R.id.version_tv)
+    @BindView(R.id.version_tv)
     TextView mVersionTv;
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @Bind(R.id.collapsing_toolbar)
+    @BindView(R.id.collapsing_toolbar)
     CollapsingToolbarLayout mCollapsingToolbar;
-    @Bind(R.id.webView)
+    @BindView(R.id.webView)
     WebView mWebView;
 
     @Override

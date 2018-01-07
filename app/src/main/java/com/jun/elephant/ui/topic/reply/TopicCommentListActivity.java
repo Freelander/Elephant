@@ -28,11 +28,11 @@ import android.widget.LinearLayout;
 
 import com.jun.elephant.R;
 import com.jun.elephant.entity.topic.TopicReplyEntity;
-import com.jun.elephant.mvpframe.base.BaseFrameWebViewActivity;
 import com.jun.elephant.global.Constants;
+import com.jun.elephant.mvpframe.base.BaseFrameWebViewActivity;
 import com.jun.elephant.ui.widget.MultiStateView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -41,15 +41,15 @@ import butterknife.OnClick;
  */
 public class TopicCommentListActivity extends BaseFrameWebViewActivity<TopicReplyPresenter, TopicReplyModel>
         implements TopicReplyContract.View {
-    @Bind(R.id.toolBar)
+    @BindView(R.id.toolBar)
     Toolbar mToolBar;
-    @Bind(R.id.multiStateView)
+    @BindView(R.id.multiStateView)
     MultiStateView mMultiStateView;
-    @Bind(R.id.webView)
+    @BindView(R.id.webView)
     WebView mWebView;
-    @Bind(R.id.bottom_rl)
+    @BindView(R.id.bottom_rl)
     LinearLayout mBottomRl;
-    @Bind(R.id.comment_edt)
+    @BindView(R.id.comment_edt)
     AppCompatEditText mCommentEdt;
 
     private String mCommentUrl;

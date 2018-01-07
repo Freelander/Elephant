@@ -31,10 +31,10 @@ import com.google.gson.Gson;
 import com.jun.elephant.R;
 import com.jun.elephant.entity.user.UserEntity;
 import com.jun.elephant.entity.user.UserInfoEntity;
-import com.jun.elephant.mvpframe.base.BaseFrameActivity;
 import com.jun.elephant.global.Constants;
+import com.jun.elephant.mvpframe.base.BaseFrameActivity;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -43,21 +43,21 @@ import butterknife.OnClick;
  */
 public class UserInfoEditActivity extends BaseFrameActivity<UserInfoPresenter, UserInfoModel> implements UserInfoContract.View {
 
-    @Bind(R.id.toolBar)
+    @BindView(R.id.toolBar)
     Toolbar mToolBar;
-    @Bind(R.id.name_tv)
+    @BindView(R.id.name_tv)
     TextView mUserNameTv;
-    @Bind(R.id.signature_tv)
+    @BindView(R.id.signature_tv)
     TextView mUserSignatureTv;
-    @Bind(R.id.user_address_tv)
+    @BindView(R.id.user_address_tv)
     TextView mUserAddressTv;
-    @Bind(R.id.user_github_tv)
+    @BindView(R.id.user_github_tv)
     TextView mUserGithubTv;
-    @Bind(R.id.user_blog_tv)
+    @BindView(R.id.user_blog_tv)
     TextView mUserBlogTv;
-    @Bind(R.id.user_twitter_tv)
+    @BindView(R.id.user_twitter_tv)
     TextView mUserTwitterTv;
-    @Bind(R.id.intro_tv)
+    @BindView(R.id.intro_tv)
     TextView mIntroTv;
 
     private MaterialDialog.Builder mInputDialog;

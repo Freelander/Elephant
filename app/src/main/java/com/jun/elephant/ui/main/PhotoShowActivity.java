@@ -28,7 +28,7 @@ import com.jun.elephant.R;
 import com.jun.elephant.common.BaseActivity;
 import com.jun.elephant.global.Constants;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import me.relex.photodraweeview.PhotoDraweeView;
 
@@ -37,9 +37,9 @@ import me.relex.photodraweeview.PhotoDraweeView;
  */
 public class PhotoShowActivity extends BaseActivity {
 
-    @Bind(R.id.toolBar)
+    @BindView(R.id.toolBar)
     Toolbar mToolbar;
-    @Bind(R.id.photo_iv)
+    @BindView(R.id.photo_iv)
     PhotoDraweeView mPhotoIv;
 
     private String mImageUrl;

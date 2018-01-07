@@ -31,7 +31,7 @@ import com.jun.elephant.ui.widget.MySwipeRefreshLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import in.srain.cube.views.ptr.PtrDefaultHandler2;
 import in.srain.cube.views.ptr.PtrFrameLayout;
@@ -41,13 +41,13 @@ import in.srain.cube.views.ptr.PtrFrameLayout;
  */
 public class UserMessageActivity extends BaseFrameActivity<MessagePresenter, MessageModel> implements MessageListContract.View {
 
-    @Bind(R.id.toolBar)
+    @BindView(R.id.toolBar)
     Toolbar mToolBar;
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
-    @Bind(R.id.multiStateView)
+    @BindView(R.id.multiStateView)
     MultiStateView mMultiStateView;
-    @Bind(R.id.swipe_layout)
+    @BindView(R.id.swipe_layout)
     MySwipeRefreshLayout mSwipeLayout;
 
     private UserMessageAdapter mAdapter;

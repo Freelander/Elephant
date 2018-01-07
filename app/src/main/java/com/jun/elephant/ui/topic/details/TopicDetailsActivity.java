@@ -31,8 +31,8 @@ import android.widget.TextView;
 import com.jun.elephant.R;
 import com.jun.elephant.entity.topic.TopicDetailEntity;
 import com.jun.elephant.entity.topic.TopicEntity;
-import com.jun.elephant.mvpframe.base.BaseFrameWebViewActivity;
 import com.jun.elephant.global.Constants;
+import com.jun.elephant.mvpframe.base.BaseFrameWebViewActivity;
 import com.jun.elephant.ui.topic.reply.TopicCommentListActivity;
 import com.jun.elephant.ui.user.info.UserInfoActivity;
 import com.jun.elephant.ui.widget.MultiStateView;
@@ -40,7 +40,7 @@ import com.jun.elephant.ui.widget.MySimpleDraweeView;
 import com.jun.elephant.ui.widget.VoteDialog;
 import com.jun.elephant.util.ShareUtil;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -50,25 +50,25 @@ import butterknife.OnClick;
 public class TopicDetailsActivity extends BaseFrameWebViewActivity<TopicDetailsPresenter, TopicDetailsModel> implements
         Toolbar.OnMenuItemClickListener, VoteDialog.OnVoteDialogClickListener, TopicDetailsContract.View {
 
-    @Bind(R.id.toolBar)
+    @BindView(R.id.toolBar)
     Toolbar mToolBar;
-    @Bind(R.id.webView)
+    @BindView(R.id.webView)
     WebView mWebView;
-    @Bind(R.id.point_tv)
+    @BindView(R.id.point_tv)
     TextView mPointTv;
-    @Bind(R.id.comment_tv)
+    @BindView(R.id.comment_tv)
     TextView mCommentTv;
-    @Bind(R.id.favorite_tv)
+    @BindView(R.id.favorite_tv)
     TextView mFavoriteTv;
-    @Bind(R.id.follow_tv)
+    @BindView(R.id.follow_tv)
     TextView mFollowTv;
-    @Bind(R.id.user_img_iv)
+    @BindView(R.id.user_img_iv)
     MySimpleDraweeView mUserImgIv;
-    @Bind(R.id.user_name_tv)
+    @BindView(R.id.user_name_tv)
     TextView mUserNameTv;
-    @Bind(R.id.user_desc_tv)
+    @BindView(R.id.user_desc_tv)
     TextView mUserDescTv;
-    @Bind(R.id.multiStateView)
+    @BindView(R.id.multiStateView)
     MultiStateView mMultiStateView;
 
     private TopicEntity mTopicEntity;

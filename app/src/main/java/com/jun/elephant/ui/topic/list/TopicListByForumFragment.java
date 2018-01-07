@@ -27,10 +27,10 @@ import android.view.ViewGroup;
 import com.jun.elephant.R;
 import com.jun.elephant.entity.topic.TopicEntity;
 import com.jun.elephant.entity.topic.TopicListEntity;
-import com.jun.elephant.mvpframe.base.BaseFrameFragment;
 import com.jun.elephant.global.Constants;
-import com.jun.elephant.ui.topic.publish.TopicPublishActivity;
+import com.jun.elephant.mvpframe.base.BaseFrameFragment;
 import com.jun.elephant.ui.adapter.TopicListAdapter;
+import com.jun.elephant.ui.topic.publish.TopicPublishActivity;
 import com.jun.elephant.ui.widget.MultiStateView;
 import com.jun.elephant.ui.widget.MySwipeRefreshLayout;
 import com.melnykov.fab.FloatingActionButton;
@@ -41,7 +41,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.bingoogolapple.badgeview.BGABadgeRelativeLayout;
 import in.srain.cube.views.ptr.PtrDefaultHandler2;
@@ -52,13 +52,13 @@ import in.srain.cube.views.ptr.PtrFrameLayout;
  */
 public class TopicListByForumFragment extends BaseFrameFragment<TopicPresenter, TopicModel> implements TopicContract.View {
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
-    @Bind(R.id.swipe_layout)
+    @BindView(R.id.swipe_layout)
     MySwipeRefreshLayout mSwipeLayout;
-    @Bind(R.id.multiStateView)
+    @BindView(R.id.multiStateView)
     MultiStateView mMultiStateView;
-    @Bind(R.id.fab)
+    @BindView(R.id.fab)
     FloatingActionButton mFabBtn;
 
     private TopicListAdapter mAdapter;
@@ -148,7 +148,6 @@ public class TopicListByForumFragment extends BaseFrameFragment<TopicPresenter, 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 
     @Override

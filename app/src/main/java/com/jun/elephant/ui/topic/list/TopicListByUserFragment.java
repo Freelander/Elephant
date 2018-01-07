@@ -17,7 +17,7 @@ import com.jun.elephant.ui.widget.MySwipeRefreshLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import in.srain.cube.views.ptr.PtrDefaultHandler2;
 import in.srain.cube.views.ptr.PtrFrameLayout;
@@ -27,11 +27,11 @@ import in.srain.cube.views.ptr.PtrFrameLayout;
  */
 public class TopicListByUserFragment extends BaseFrameFragment<TopicPresenter, TopicModel> implements TopicContract.View {
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
-    @Bind(R.id.multiStateView)
+    @BindView(R.id.multiStateView)
     MultiStateView mMultiStateView;
-    @Bind(R.id.swipe_layout)
+    @BindView(R.id.swipe_layout)
     MySwipeRefreshLayout mSwipeLayout;
 
     private TopicListAdapter mAdapter;
@@ -88,7 +88,6 @@ public class TopicListByUserFragment extends BaseFrameFragment<TopicPresenter, T
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 
     @Override

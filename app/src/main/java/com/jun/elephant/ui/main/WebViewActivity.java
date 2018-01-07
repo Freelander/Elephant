@@ -22,12 +22,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.webkit.WebView;
 
-import com.jun.elephant.ui.widget.MultiStateView;
 import com.jun.elephant.R;
 import com.jun.elephant.common.BaseWebViewActivity;
 import com.jun.elephant.global.Constants;
+import com.jun.elephant.ui.widget.MultiStateView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -35,11 +35,11 @@ import butterknife.ButterKnife;
  */
 public class WebViewActivity extends BaseWebViewActivity {
 
-    @Bind(R.id.toolBar)
+    @BindView(R.id.toolBar)
     Toolbar mToolBar;
-    @Bind(R.id.webView)
+    @BindView(R.id.webView)
     WebView mWebView;
-    @Bind(R.id.multiStateView)
+    @BindView(R.id.multiStateView)
     MultiStateView mMultiStateView;
 
     private String mWebUrl, mTitle;
